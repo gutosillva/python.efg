@@ -1,0 +1,46 @@
+#As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa que calculará os reajustes.
+#Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+#salários até R$ 280,00 (incluindo) : aumento de 20%
+#salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+#salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+#salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
+#o salário antes do reajuste;
+#o percentual de aumento aplicado;
+#o valor do aumento;
+#o novo salário, após o aumento.
+valor_inicial = int(input("Digite seu salário atual:"))
+
+if valor_inicial<= 280:
+    porcentagem = 20
+    aumento = (porcentagem / 100) * valor_inicial
+    valor_final = valor_inicial + aumento
+    
+    print(f"Valor Inicial: R${valor_inicial}")
+    print(f"Aumento de {porcentagem}%: R${aumento}")
+    print(f"Valor Após o Aumento: R${valor_final}")
+elif valor_inicial > 280 and valor_inicial < 700:
+    porcentagem = 15
+    aumento = (porcentagem / 100) * valor_inicial
+    valor_final = valor_inicial + aumento
+    
+    print(f"Valor Inicial: R${valor_inicial}")
+    print(f"Aumento de {porcentagem}%: R${aumento}")
+    print(f"Valor Após o Aumento: R${valor_final}")
+elif valor_inicial > 700 and valor_inicial < 1500:
+    porcentagem = 10
+    aumento = (porcentagem / 100) * valor_inicial
+    valor_final = valor_inicial + aumento
+    
+    print(f"Valor Inicial: R${valor_inicial}")
+    print(f"Aumento de {porcentagem}%: R${aumento}")
+    print(f"Valor Após o Aumento: R${valor_final}")
+elif valor_inicial >= 1500:
+    porcentagem = 5
+    aumento = (porcentagem / 100) * valor_inicial
+    valor_final = valor_inicial + aumento
+    
+    print(f"Valor Inicial: R${valor_inicial}")
+    print(f"Aumento de {porcentagem}%: R${aumento}")
+    print(f"Valor Após o Aumento: R${valor_final}")
+else:
+    print("valor invalido")
